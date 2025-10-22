@@ -98,7 +98,29 @@ DISTFILES += \
     res/fonts/COPYRIGHT.txt \
     res/fonts/LICENSE \
     res/fonts/LICENSE.txt \
-    version.txt
+    version.txt \
+    android/AndroidManifest.xml \
+    android/build.gradle \
+    android/gradle.properties \
+    android/gradle/wrapper/gradle-wrapper.jar \
+    android/gradle/wrapper/gradle-wrapper.properties \
+    android/gradlew \
+    android/gradlew.bat \
+    android/res/values/libs.xml \
+    android/res/values/strings.xml \
+    android/res/values/themes.xml
+
+android {
+    QT += androidextras
+
+    ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+
+    disable-xcb {
+      message("The disable-xcb option has been deprecated. Please use disable-desktop instead.")
+        CONFIG += disable-desktop
+    }
+    include(/opt/android-sdk/android_openssl/openssl.pri)
+}
 
 # Force C++17 if available
 contains(QT_CONFIG, c++1z): CONFIG += c++1z

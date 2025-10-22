@@ -20,7 +20,6 @@
 #endif
 
 #include "hal.h"
-#include "imageprovider.h"
 
 
 int main(int argc, char *argv[]) {

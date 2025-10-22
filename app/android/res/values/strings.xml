@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Duel times</string>
+    <string name="desc">QML version game</string>
+</resources>

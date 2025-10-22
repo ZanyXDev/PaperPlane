@@ -5,5 +5,8 @@
         <file>res/qml/common/app_ver_txt.qml</file>
         <file>res/qml/common/mydebugrect.qml</file>
         <file>res/qml/common/qmldir</file>
+        <file>res/qml/common/fade_stack_layout.qml</file>
+        <file>res/qml/pages/page_main.qml</file>
+        <file>res/qml/pages/qmldir</file>
     </qresource>
 </RCC>

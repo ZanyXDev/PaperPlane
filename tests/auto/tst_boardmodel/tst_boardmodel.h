@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QObject>
-#include "src/boardmodel.h"
+//#include "src/boardmodel.h"
 
 // add necessary includes here
 #include <QAbstractItemModelTester>
@@ -30,7 +30,7 @@ private slots:
     void testAddCell();
     void testDataChanged();
 private:
-    BoardModel m_model;
+    //BoardModel m_model;
     QAbstractItemModelTester* m_tester;
 };
 

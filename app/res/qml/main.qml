@@ -4,8 +4,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
 
 import common 1.0
-
-import io.github.zanyxdev.paperplane 1.0
+import pages 1.0
 import io.github.zanyxdev.paperplane.hal 1.0
 
 QQC2.ApplicationWindow {
@@ -23,7 +22,7 @@ QQC2.ApplicationWindow {
   property var screenAvailableHeight: Screen.desktopAvailableHeight
 
   ///TODO use settings in cpp part to load|save mode
-  property bool lightMode: dataManager.lightMode
+  //property bool lightMode: dataManager.lightMode
 
   // ----- Signal declarations
   signal screenOrientationUpdated(int screenOrientation)
@@ -35,8 +34,8 @@ QQC2.ApplicationWindow {
   * для адаптации под удлиненные экраны 18:9 можно использовать размер фрейма 360×720.
   * Размер фрейма для приложения на системе IOS чаще всего используется 375×812.
 */
-  width: 360
-  height: 640
+  width: 640
+  height: 360
 
   maximumHeight: height
   maximumWidth: width
@@ -57,16 +56,6 @@ QQC2.ApplicationWindow {
   // ----- Signal handlers
   Component.onCompleted: {
 
-    // Write to model default values from QSetting
-    ///TODO read from  dataManager (need use settings for read|save values)
-    appSettingsModel.setProperty(0, "widthPortition", appWnd.width)
-    appSettingsModel.setProperty(0, "heightPortition", appWnd.height)
-    appSettingsModel.setProperty(0, "showFogParticles", true)
-    appSettingsModel.setProperty(0, "showShootingStarParticles", true)
-    appSettingsModel.setProperty(0, "showLighting", true)
-    appSettingsModel.setProperty(0, "showColors", true)
-    appSettingsModel.setProperty(0, "boardSize", 4)
-
     let infoMsg = `Screen.height[${Screen.height}], Screen.width[${Screen.width}]
     Screen [height ${height},width ${width}]
     Build with [${HAL.getAppBuildInfo()}]
@@ -83,11 +72,14 @@ QQC2.ApplicationWindow {
     //AppSingleton.toLog(`dataManager.boardModel.rowCount [${dataManager.boardModel.rowCount()}]`)
   }
 
+  ///TODO add splashcsreen Desktop and Mobile
+  // https://evileg.com/ru/post/596/
+  // https://forum.qt.io/topic/90954/proper-way-to-create-splash-screen-in-qt-quick2/2
+  // https://falsinsoft.blogspot.com/2017/07/qml-show-android-native-splash-screen.html
   onAppInForegroundChanged: {
     if (appInForeground) {
       if (!appInitialized) {
         appInitialized = true
-
         //appCore.initialize()
       }
     } else {
@@ -98,7 +90,15 @@ QQC2.ApplicationWindow {
   }
 
   // ----- Visual children
-
+  FadeStackLayout {
+    id: fadeLayout
+    PageMain {
+        id: pageMain
+    }
+    Component.onCompleted: {
+      pageMain.pageActive = true
+    }
+  }
   // ----- Qt provided non-visual children
 
   // ----- Custom non-visual children

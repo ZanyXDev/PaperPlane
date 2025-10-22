@@ -10,7 +10,7 @@ CONFIG -= app_bundle
 
 
 INCLUDEPATH += ../../../app/
-include(../../../app/app.pri)
+#include(../../../app/test_boardmodel.pri)
 
 HEADERS += \
                         tst_boardmodel.h

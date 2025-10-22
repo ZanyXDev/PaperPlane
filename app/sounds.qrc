@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
-        <file>res/sounds/click.wav</file>
+        <file>res/audio/music/lost.wav</file>
+        <file>res/audio/music/main_theme.wav</file>
+        <file>res/audio/music/victory.wav</file>
     </qresource>
 </RCC>

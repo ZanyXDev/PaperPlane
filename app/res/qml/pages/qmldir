@@ -1,0 +1,3 @@
+module pages
+PageMain 1.0 page_main.qml
+

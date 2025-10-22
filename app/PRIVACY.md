@@ -1,4 +1,4 @@
-# Privacy policy file for ParkMeCrazy [QML version] mobile application
+# Privacy policy file for PapaperPlane [QML version] mobile application
 
 ------
 
