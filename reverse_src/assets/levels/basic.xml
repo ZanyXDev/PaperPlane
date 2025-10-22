@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<levels>
+    <level id="1" path="levels/basic/level_1/Level_1.qml" lockedstate="1" apples="0" />
+    <level id="2" path="levels/basic/level_2/Level_2.qml" lockedstate="0" apples="0" />
+    <level id="3" path="levels/basic/level_3/Level_3.qml" lockedstate="0" apples="0" />
+    <level id="4" path="levels/basic/level_4/Level_4.qml" lockedstate="0" apples="0" />
+    <level id="5" path="levels/basic/level_5/Level_5.qml" lockedstate="0" apples="0" />
+    <level id="6" path="levels/basic/level_6/Level_6.qml" lockedstate="0" apples="0" />
+    <level id="7" path="levels/basic/level_7/Level_7.qml" lockedstate="0" apples="0" />
+    <level id="8" path="levels/basic/level_8/Level_8.qml" lockedstate="0" apples="0" />
+    <level id="9" path="levels/basic/level_9/Level_9.qml" lockedstate="0" apples="0" />
+    <level id="10" path="levels/basic/level_10/Level_10.qml" lockedstate="0" apples="0" />
+    <level id="11" path="levels/basic/level_11/Level_11.qml" lockedstate="0" apples="0" />
+    <level id="12" path="levels/basic/level_12/Level_12.qml" lockedstate="0" apples="0" />
+    <level id="13" path="levels/basic/level_13/Level_13.qml" lockedstate="0" apples="0" />
+    <level id="14" path="levels/basic/level_14/Level_14.qml" lockedstate="0" apples="0" />
+    <level id="15" path="levels/basic/level_15/Level_15.qml" lockedstate="0" apples="0" />
+</levels>

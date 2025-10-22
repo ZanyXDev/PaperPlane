@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<classes>
+    <class name="Basics" description="the introduction.." lockedstate="1" levelcount="15" badges="0" grade="0.0" filename="basic.xml" />
+    <class name="Advanced" description="solve the puzzle.." lockedstate="0" levelcount="15" badges="0" grade="0.0" filename="advanced.xml" />
+    <class name="Laboratory" description="coming soon.." lockedstate="0" levelcount="15" badges="0" grade="0.0" filename="expert.xml" />
+</classes>
